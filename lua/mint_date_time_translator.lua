@@ -53,7 +53,7 @@ function mint_date_time_translator(input, seg)
     -- %%	the character `%´
 
     -- 输入完整日期
-    if (input == "datetime") then
+    if (input == "datetime" or input == "dt") then
         yield(make_hight_quality_candidate("date", seg.start, seg._end, os.date("%Y-%m-%d %H:%M:%S"), "yyyy-MM-dd HH:mm:ss"))
     end
 
